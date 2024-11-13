@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Jajanan Tradisional</title>
+    <!-- Link font -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+    
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        /* Body styling */
+        body {
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: transparent;
+        }
+
+        .navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.navbar .navbar-brand {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar .navbar-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-item {
+    float: left;
+}
+
+.navbar .nav-link {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar .nav-link:hover {
+    background-color: #ddd;
+    color: black;
+}   
+
+        .cta {
+            background-color: #f39c12;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .cta:hover {
+            background-color: #e67e22;
+        }
+
+        /* Main section styling */
+        main {
+            top: 100px;
+            max-width: 700px; /* Membatasi lebar konten */
+            margin: 50px auto; /* Mengatur margin agar berada di tengah */
+            padding: 50px 20px;
+            background-color: #fff; /* Warna latar belakang konten */
+            border-radius: 10px; /* Membuat sudut bulat */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Efek bayangan */
+            overflow: hidden;
+            position: relative;
+            color: #333; /* Ganti warna teks menjadi gelap agar terlihat */
+        }
+
+        .circle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #a702da;
+            clip-path: circle(600px at right 800px);
+        }
+
+        /* Gaya default untuk perangkat besar */
+        body {
+            font-size: 16px;
+        }
+
+        /* Gaya untuk perangkat dengan lebar maksimum 768px (tablet dan ponsel) */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+        }
+
+        /* Gaya untuk perangkat dengan lebar maksimum 480px (ponsel) */
+        @media (max-width: 480px) {
+            body {
+                font-size: 12px;
+            }
+        }
+
+        .about-container {
+            background-color: rgba(0, 0, 0, 0.6); /* Latar belakang semi-transparan */
+            padding: 30px;
+            border-radius: 10px;
+            color: #fff; /* Warna teks putih untuk kontras */
+        }
+
+        .about h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .about p {
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .about-content {
+            text-align: left;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Logo -->
+        <nav class="navbar">
+    <div class="container">
+        <a href="#" class="navbar-brand">Brand</a>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+    </header>
+    <div class="circle"></div>
+    <section id="About">
+        <main>
+            <div class="about-container">
+                <h1>Asal Usul Nama Jajanan Pasar / Tradisional</h1>
+                <br>
+                <p>Kue tradisional Indonesia atau jajan pasar sering disebut sebagai makanan khas Nusantara. 
+                    Pernyataan tersebut tidak sepenuhnya salah. Namun demikian, jajan pasar yang sering ditemui 
+                    di banyak pusat perbelanjaan, hotel, dan restoran sebenarnya sudah tercampur dengan kultur 
+                    atau budaya dari negara lain.</p>
+                <br>
+                <div class="about-content">
+                    <h2>Sejarah Jajanan Tradisional</h2>
+                    <br>
+                    <p>Sejarah kue di Indonesia dimulai sejak negeri ini menjadi jalur lalu lintas utama perdagangan dunia berabad silam. 
+                        Datangnya para kaum pendatang di bumi Indonesia sejak dahulu tak hanya menghadirkan ragam keelokan pada tradisi dan budaya bangsa ini, tapi juga dalam hal kulinernya. 
+                        Komoditas gula, yang mana menjadi primadona pada waktu itu diduga menjadi awal mula bagaimana kue dari berbagai belahan dunia kemudian masuk ke Indonesia.
+                        Indonesia merupakan surganya kuliner, mulai dari makanan khas Nusantara yang mengandung rempah khas, minuman, hingga jajanan tradisional yang awalnya dijajakan di pasar maupun pedagang keliling. 
+                        Jajanan tradisional ala pasar sendiri mempunyai banyak sekali varian, dari yang manis, asin, basah hingga kering. 
+                        Indonesia sangat terkenal dengan ragam makanannya yang khas. Meski saat ini penetrasi makanan yang dipengaruhi budaya luar negeri semakin tinggi, kue jajanan pasar pasti selalu ada di hati kita. 
+                        Perasaan sentimentil mungkin sering kita rasakan saat melahap kue tradisional. Bisa jadi karena ada memori yang kita kenang saat memakan jajanan tertentu atau karena beberapa kue tradisional semakin langka ditemukan. 
+                        Jika kita bicara jenis kue jajanan pasar, ada banyak sekali kue yang menjadi makanan favorit orang-orang. Mulai dari kue yang berat seperti lemper, hingga yang ringan seperti pukis, kue lumpur, atau klepon.</p>
+                </div>
+            </div>
+        </main>
+    </section>
+</body>
+</html>

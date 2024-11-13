@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Bazar XI RPL-2</title>
+    <link rel="icon" href="bendera-removebg-preview.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            padding: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: transparent;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 15px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .cta {
+            background-color: #f39c12;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .cta:hover {
+            background-color: #e67e22;
+        }
+
+        .content {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .content .textBox {
+            position: relative;
+            max-width: 600px;
+        }
+
+        .content .textBox h2 {
+            color: #333;
+            font-size: 2em;
+            line-height: 1.4em;
+            font-weight: 500;
+        }
+
+        .content .textBox h2 span {
+            color: #a702da;
+            font-size: 1.5em;
+            font-weight: 900;
+        }
+
+        .content .textBox p {
+            color: #333;
+        }
+
+        .content .textBox a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 8px 20px;
+            background: #a702da;
+            color: #fff;
+            border-radius: 40px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+
+        .content .imgBox {
+            width: 600px;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 30px;
+            margin-top: 20px;
+        }
+
+        .content .imgBox img {
+            max-width: 400px;
+        }
+
+        .thumb {
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+            transform: translateX(-50%);
+            display: flex;
+        }
+
+        .thumb li {
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+            cursor: pointer;
+            transition: 1s;
+        }
+
+        .thumb li:hover {
+            transform: translateY(-15px);
+        }
+
+        .thumb li img {
+            max-width: 80px;
+        }
+
+        .sci {
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .sci li {
+            list-style: none;
+        }
+
+        .sci li a {
+            display: inline-block;
+            margin: 5px 0;
+            transform: scale(1.5);
+            filter: invert(1);
+        }
+
+        .circle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #a702da;
+            clip-path: circle(550px at right 800px);
+        }
+
+        /* Gaya default untuk perangkat besar */
+        body {
+            font-size: 16px;
+        }
+
+        /* Gaya untuk perangkat dengan lebar maksimum 768px (tablet dan ponsel) */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+        }
+
+        /* Gaya untuk perangkat dengan lebar maksimum 480px (ponsel) */
+        @media (max-width: 480px) {
+           
+            .navbar {
+                width: max-content;
+                
+            }
+            .imgBox {
+                width: auto;
+                height: 200px;
+            }
+            section {
+                width: auto;
+                height: auto;
+                
+            }
+        }
+    </style>
+</head>
+<body class="sm:size-16px sm:flex-col">
+    <!-- Navbar -->
+    <nav class="navbar bg-fuchsia-800 sm:w-full">
+        <div class="flex items-center space-x-4 logo">
+            <img src="bendera-removebg-preview.png" alt="" class="w-12 h-12 rounded-full">
+            <h1 class="text-l font-bold text-white">Bazar - XI RPL-2</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="beranda.html#">Beranda</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">Tentang</a></li>
+        </ul>
+    </nav>
+    <!-- End Navbar -->
+    
+    <!-- Section 1 -->
+    <section>
+        <div class="circle"></div>
+        <!-- Paragraf -->
+        <div class="content">
+            <div class="textBox">
+                <h2>Ini adalah <span><b>Jajanan Tradisional Indonesia</b></span> 
+                    yang begitu penuh banyak kenangan</h2>
+                <p>Jajanan kami memang klasik, namun hal itulah yang <br>
+                    membuatnya luar biasa dan estetik. Dengan pesona jajanan <br>
+                    Nusantara yang membuat semua terpukau. Kami akan selalu <br>
+                    menemani di sela-sela aktivitas anda yang sangat sibuk</p>
+                <a href="about.html">Learn More</a>
+            </div>
+            <!-- Image -->
+            <div class="imgBox">
+                <img src="website-pa-sohe/es_kopi_milo-removebg-preview.png" class="dadar_gulung" alt="Jajanan Tradisional">
+            </div>
+        </div>
+        <!-- End Paragraf -->
+        
+        <!-- Slide Images -->
+        <ul class="thumb">
+            <li><img src="website-pa-sohe/es_kopi_milo-removebg-preview.png" 
+                onclick="imgSlider('website-pa-sohe/es_kopi_milo-removebg-preview'); 
+                    changeCircleColor('#a702da')"></li>
+            <li><img src="website-pa-sohe/nasi_padang-removebg-preview.png" 
+                onclick="imgSlider('website-pa-sohe/nasi_padang-removebg-preview'); 
+                    changeCircleColor('#0260cc')"></li>
+            <li><img src="website-pa-sohe/es_tebak-removebg-preview.png" 
+                onclick="imgSlider('website-pa-sohe/es_tebak-removebg-preview'); 
+                    changeCircleColor('#fc2589')"></li>
+        </ul>
+        <!-- End Slide Images -->
+        
+        <!-- Icon Contact -->
+        <ul class="sci">
+            <li><a href="https://www.instagram.com/kuwehku.id?igsh=Y2l0c3d0c3VpMXBw"><img src="website-pa-sohe/instagram.svg" alt=""></a></li>
+            <li><a href="#"><img src="website-pa-sohe/tiktok.svg" alt=""></a></li>
+            
+        </ul>
+        <!-- Icon Contact -->
+    </section>
+    <!-- End Section 1 -->
+    
+    <!-- JavaScript -->
+    <script>
+        function imgSlider(anything) {
+            document.querySelector('.dadar_gulung').src = anything;
+        }
+        function changeCircleColor(color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+    <!-- End JavaScript -->
+</body>
+</html>
